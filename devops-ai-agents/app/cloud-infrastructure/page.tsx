@@ -345,10 +345,12 @@ export default function CloudInfrastructurePage() {
     setTimeout(() => {
       const updatedServers = mcpServers.map(server => {
         if (server.id === serverId) {
+          // Fix: Explicitly cast the status to the allowed enum types
+          const newStatus = server.status === 'running' ? 'stopped' as const : 'running' as const;
           return {
             ...server,
-            status: server.status === 'running' ? 'stopped' : 'running',
-            lastSync: server.status === 'stopped' ? new Date().toISOString() : server.lastSync
+            status: newStatus,
+            lastSync: newStatus === 'running' ? new Date().toISOString() : server.lastSync
           };
         }
         return server;
@@ -675,7 +677,7 @@ export default function CloudInfrastructurePage() {
                 </div>
                 <div className="flex items-center space-x-3">
                   {server.status === 'running' && (
-                    <div className="text-sm bg-green-100 text-green-800 px-3 py-1 rounded-md">
+                    <div className="text-sm bg-green-100 text-green-800 px-3 py-1 rounded-md mr-2">
                       <span className="font-medium">{server.resourceCount}</span> resources monitored
                     </div>
                   )}
