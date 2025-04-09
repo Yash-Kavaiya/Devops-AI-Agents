@@ -289,7 +289,8 @@ export default function CiCdPage() {
       setTimeout(() => {
         const updatedServers = mcpServers.map(s => {
           if (s.id === serverId) {
-            const newStatus = s.status === 'running' ? 'stopped' : 'running';
+            // Fix: Explicitly casting the status to the allowed types
+            const newStatus = s.status === 'running' ? 'stopped' as const : 'running' as const;
             const lastStarted = newStatus === 'running' ? new Date().toISOString() : s.lastStarted;
             
             return {
