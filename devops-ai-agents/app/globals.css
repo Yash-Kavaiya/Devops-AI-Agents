@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 245, 245;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "Segoe UI", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.sidebar-item {
+  @apply flex items-center gap-3 p-3 rounded-md transition-all duration-200;
+}
+
+.sidebar-item:hover {
+  @apply bg-msBlue-100;
+}
+
+.sidebar-item.active {
+  @apply bg-msBlue-200 text-msBlue-700;
+}
+
+.card {
+  @apply p-6 rounded-xl shadow-md bg-white border border-msGray-200 hover:shadow-lg transition-shadow duration-300;
+}
+
+.btn-primary {
+  @apply px-4 py-2 bg-ms-gradient text-white rounded-md hover:bg-ms-gradient-dark transition-colors duration-300;
+}
+
+.card-title {
+  @apply text-xl font-semibold text-msBlue-700 mb-2;
+}
+
+.page-title {
+  @apply text-3xl font-bold bg-clip-text text-transparent bg-ms-gradient pb-1;
+}
+
+/* Switch component styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #3b82f6;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #3b82f6;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
