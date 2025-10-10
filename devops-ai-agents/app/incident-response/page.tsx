@@ -1,4 +1,5 @@
 import PageLayout from '@/components/PageLayout';
+import MultiModalChat from '@/components/MultiModalChat';
 import { BsBug, BsClockHistory, BsExclamationCircle, BsCheck2Circle } from 'react-icons/bs';
 
 export default function IncidentResponsePage() {
@@ -84,6 +85,9 @@ export default function IncidentResponsePage() {
           </div>
         </div>
       </div>
+      
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
     </PageLayout>
   );
 }

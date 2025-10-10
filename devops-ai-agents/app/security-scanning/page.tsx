@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PageLayout from '@/components/PageLayout';
+import MultiModalChat from '@/components/MultiModalChat';
 import {
   BsShieldLock,
   BsSearch,
@@ -961,6 +962,9 @@ export default function SecurityScanningPage() {
           </div>
         </div>
       )}
+      
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
     </PageLayout>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
+import MultiModalChat from '@/components/MultiModalChat';
 import { 
   BsCloud, 
   BsServer, 
@@ -1189,6 +1190,9 @@ export default function CloudInfrastructurePage() {
           {feedbackMessage}
         </div>
       )}
+      
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
     </PageLayout>
   );
 }

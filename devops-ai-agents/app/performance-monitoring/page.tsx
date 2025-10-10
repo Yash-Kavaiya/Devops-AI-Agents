@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
+import MultiModalChat from '@/components/MultiModalChat';
 import {
   BsLightningCharge,
   BsBarChart,
@@ -154,6 +155,9 @@ export default function PerformanceMonitoringPage() {
           ))}
         </div>
       </div>
+      
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
     </PageLayout>
   );
 }

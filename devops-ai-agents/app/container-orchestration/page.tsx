@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
+import MultiModalChat from '@/components/MultiModalChat';
 import {
   BsFillGrid3X3GapFill,
   BsCpu,
@@ -728,6 +729,9 @@ export default function ContainerOrchestrationPage() {
           </motion.div>
         )}
       </AnimatePresence>
+      
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
     </PageLayout>
   );
 }

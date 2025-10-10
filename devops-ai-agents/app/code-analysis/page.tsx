@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PageLayout from '@/components/PageLayout';
+import MultiModalChat from '@/components/MultiModalChat';
 import {
   BsCodeSlash,
   BsShieldCheck,
@@ -531,6 +532,9 @@ export default function CodeAnalysisPage() {
           </div>
         </div>
       )}
+      
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
     </PageLayout>
   );
 }

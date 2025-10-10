@@ -3,7 +3,7 @@
 import { FeatureCard } from '@/components/FeatureCard';
 import { BsGear, BsCloud, BsCodeSquare, BsShieldCheck, BsDiagram3, BsGraphUp, BsSpeedometer, BsBug, BsRobot, BsArrowRight, BsStars, BsLightning } from 'react-icons/bs';
 import { motion } from 'framer-motion';
-import AgentChat from '@/components/AgentChat';
+import MultiModalChat from '@/components/MultiModalChat';
 
 export default function Home() {
   const features = [
@@ -238,17 +238,8 @@ export default function Home() {
         </div>
       </div>
       
-      {/* Add floating AI assistant button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <motion.button 
-          className="w-14 h-14 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <BsRobot size={24} />
-          <span className="sr-only">AI Assistant</span>
-        </motion.button>
-      </div>
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
       
       {/* Add custom animation class to your global CSS */}
       <style jsx global>{`
@@ -264,7 +255,6 @@ export default function Home() {
           animation: spin-slow 20s linear infinite;
         }
       `}</style>
-      <AgentChat agentType="home" />
     </div>
   );
 }

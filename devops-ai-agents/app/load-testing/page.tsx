@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
 import PageLayout from '@/components/PageLayout';
+import MultiModalChat from '@/components/MultiModalChat';
 import {
   BsGraphUp,
   BsGearFill,
@@ -220,6 +221,9 @@ export default function LoadTestingPage() {
           <BsArrowRepeat className="mr-2" /> Analysis
         </button>
       </div>
+      
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
     </PageLayout>
   );
 }

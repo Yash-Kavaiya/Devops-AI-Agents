@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import PageLayout from '@/components/PageLayout';
+import MultiModalChat from '@/components/MultiModalChat';
 import { 
   BsGear, 
   BsCheckCircle, 
@@ -943,6 +944,9 @@ export default function CiCdPage() {
           </motion.div>
         )}
       </AnimatePresence>
+      
+      {/* Multi-Modal AI Chat Widget */}
+      <MultiModalChat />
     </PageLayout>
   );
 }

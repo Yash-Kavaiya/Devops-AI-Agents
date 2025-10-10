@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { BsGear, BsCloud, BsCodeSquare, BsShieldCheck, 
          BsDiagram3, BsGraphUp, BsSpeedometer, BsBug, 
-         BsHouseDoor, BsList, BsX, BsLightbulb, BsRobot } from 'react-icons/bs';
+         BsHouseDoor, BsList, BsX, BsLightbulb, BsRobot, BsPeople } from 'react-icons/bs';
 
 const menuItems = [
   { icon: <BsHouseDoor size={20} />, name: "Home", path: "/" },
@@ -18,6 +18,7 @@ const menuItems = [
   { icon: <BsGraphUp size={20} />, name: "Performance Monitoring", path: "/performance-monitoring" },
   { icon: <BsSpeedometer size={20} />, name: "Load Testing", path: "/load-testing" },
   { icon: <BsBug size={20} />, name: "Incident Response", path: "/incident-response" },
+  { icon: <BsPeople size={20} />, name: "About Us", path: "/about" },
 ];
 
 export default function Sidebar() {
