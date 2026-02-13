@@ -341,7 +341,7 @@ npm run lint
 
 The application follows a modern frontend architecture using Next.js App Router:
 
-<div align="center">
+<div align="left">
 
 ```
 devops-ai-agents/
@@ -365,7 +365,6 @@ devops-ai-agents/
 ├── public/               # Static assets
 └── ...                   # Configuration files
 ```
-
 </div>
 
 ---
@@ -374,7 +373,7 @@ devops-ai-agents/
 
 ### Core Components
 
-<div align="center">
+<div align="left">
   <img src="Images/image.png" alt="Core Components Overview" width="700px" />
 </div>
 
